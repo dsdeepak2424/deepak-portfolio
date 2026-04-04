@@ -60,13 +60,13 @@ const About = () => {
   return (
     <div>
       {/* About Me Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               About Me
             </h1>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
                 I am <span className="font-semibold text-gray-900">Deepak Sunil</span>, a passionate web designer and front-end developer 
                 focused on creating modern, user-friendly, responsive websites and landing pages. With a keen eye for 
@@ -89,10 +89,10 @@ const About = () => {
       </section>
 
       {/* Why Choose Me */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-left mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Why Choose Me
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -100,19 +100,19 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {reasons.map((reason, index) => (
-              <Card key={index} className="border-l-4 border-l-gray-900">
-                <CardContent className="pt-6">
+              <Card key={index} className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <CardContent className="pt-8">
                   <div className="flex items-start space-x-4">
                     <div className="text-gray-900 flex-shrink-0">
                       {reason.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
                         {reason.title}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 leading-relaxed">
                         {reason.description}
                       </p>
                     </div>
@@ -122,18 +122,18 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="border-l-4 border-l-gray-900">
-              <CardContent className="pt-6">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <CardContent className="pt-8">
                 <div className="flex items-start space-x-4">
                   <div className="text-gray-900 flex-shrink-0">
                     <CheckCircle2 size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       Attention to Detail
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 leading-relaxed">
                       Every pixel matters - meticulous craftsmanship in every project
                     </p>
                   </div>
@@ -141,17 +141,17 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-gray-900">
-              <CardContent className="pt-6">
+            <Card className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <CardContent className="pt-8">
                 <div className="flex items-start space-x-4">
                   <div className="text-gray-900 flex-shrink-0">
                     <Layout size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       Landing Page Expertise
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 leading-relaxed">
                       Specialized knowledge in creating pages that convert
                     </p>
                   </div>
@@ -163,10 +163,10 @@ const About = () => {
       </section>
 
       {/* Services Detail */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-left mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -174,17 +174,17 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow">
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-gray-200">
                 <CardHeader>
-                  <div className="text-gray-900 mb-4">
+                  <div className="text-gray-900 mb-6">
                     {service.icon}
                   </div>
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-base">
                     {service.description}
                   </p>
                 </CardContent>
@@ -195,10 +195,10 @@ const About = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-left mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Skills & Technologies
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -206,9 +206,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             {skills.map((skill, index) => (
-              <Badge key={index} variant="secondary" className="px-4 py-2 text-base">
+              <Badge key={index} variant="secondary" className="px-5 py-3 text-base font-medium hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
                 {skill}
               </Badge>
             ))}

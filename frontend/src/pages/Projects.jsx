@@ -84,10 +84,10 @@ const Projects = () => {
   return (
     <div>
       {/* Projects Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-left mb-16">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Featured Projects
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -95,21 +95,21 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow">
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
-                  <CardDescription className="text-base">
+                  <CardTitle className="text-2xl mb-3">{project.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                        className="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full"
                       >
                         {tag}
                       </span>
@@ -117,7 +117,8 @@ const Projects = () => {
                   </div>
                   <Button
                     asChild
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto shadow-md hover:shadow-lg"
+                    size="lg"
                   >
                     <a
                       href={project.link}
@@ -136,10 +137,10 @@ const Projects = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-left mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Get In Touch
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -150,17 +151,17 @@ const Projects = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <Card>
+              <Card className="shadow-lg border-gray-200">
                 <CardHeader>
-                  <CardTitle>Send an Enquiry</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-2xl">Send an Enquiry</CardTitle>
+                  <CardDescription className="text-base">
                     Fill out the form and I'll get back to you via WhatsApp
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Label htmlFor="name">Name *</Label>
+                      <Label htmlFor="name" className="text-base font-semibold">Name *</Label>
                       <Input
                         id="name"
                         name="name"
@@ -169,12 +170,12 @@ const Projects = () => {
                         onChange={handleInputChange}
                         placeholder="Your full name"
                         required
-                        className="mt-2"
+                        className="mt-2 h-12 text-base"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="email">Email *</Label>
+                      <Label htmlFor="email" className="text-base font-semibold">Email *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -183,12 +184,12 @@ const Projects = () => {
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
                         required
-                        className="mt-2"
+                        className="mt-2 h-12 text-base"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Message (Optional)</Label>
+                      <Label htmlFor="message" className="text-base font-semibold">Message (Optional)</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -196,11 +197,11 @@ const Projects = () => {
                         onChange={handleInputChange}
                         placeholder="Tell me about your project..."
                         rows={4}
-                        className="mt-2"
+                        className="mt-2 text-base"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
+                    <Button type="submit" className="w-full shadow-lg hover:shadow-xl" size="lg">
                       <Send className="mr-2" size={18} />
                       Send Enquiry via WhatsApp
                     </Button>
@@ -213,7 +214,7 @@ const Projects = () => {
                   onClick={handleEmailContact}
                   variant="outline"
                   size="lg"
-                  className="w-full"
+                  className="w-full border-2 shadow-md hover:shadow-lg"
                 >
                   <Mail className="mr-2" size={18} />
                   Or Contact via Email
@@ -224,19 +225,19 @@ const Projects = () => {
             {/* Contact Info */}
             <div>
               <div className="space-y-6">
-                <Card>
-                  <CardContent className="pt-6">
+                <Card className="hover:shadow-lg transition-all duration-300 border-gray-200">
+                  <CardContent className="pt-8">
                     <div className="flex items-start space-x-4">
                       <div className="text-gray-900 flex-shrink-0">
-                        <Phone size={24} />
+                        <Phone size={28} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
                           Phone / WhatsApp
                         </h3>
                         <a
                           href="tel:8973155551"
-                          className="text-gray-600 hover:text-gray-900 transition-colors"
+                          className="text-gray-600 hover:text-gray-900 transition-colors text-lg"
                         >
                           8973155551
                         </a>
@@ -245,19 +246,19 @@ const Projects = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="pt-6">
+                <Card className="hover:shadow-lg transition-all duration-300 border-gray-200">
+                  <CardContent className="pt-8">
                     <div className="flex items-start space-x-4">
                       <div className="text-gray-900 flex-shrink-0">
-                        <Mail size={24} />
+                        <Mail size={28} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
                           Email
                         </h3>
                         <a
                           href="mailto:dsdeepak2424@gmail.com"
-                          className="text-gray-600 hover:text-gray-900 transition-colors break-all"
+                          className="text-gray-600 hover:text-gray-900 transition-colors break-all text-lg"
                         >
                           dsdeepak2424@gmail.com
                         </a>
@@ -266,28 +267,28 @@ const Projects = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="pt-6">
+                <Card className="hover:shadow-lg transition-all duration-300 border-gray-200">
+                  <CardContent className="pt-8">
                     <div className="flex items-start space-x-4">
                       <div className="text-gray-900 flex-shrink-0">
-                        <MapPin size={24} />
+                        <MapPin size={28} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
                           Location
                         </h3>
-                        <p className="text-gray-600">India</p>
+                        <p className="text-gray-600 text-lg">India</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-50">
-                  <CardContent className="pt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <Card className="bg-gray-50 border-gray-200">
+                  <CardContent className="pt-8">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       Let's Build Something Great
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-base">
                       Whether you need a new website, a landing page redesign, or a fresh logo, 
                       I'm here to help bring your vision to life. Let's discuss your project and 
                       create something exceptional together.
