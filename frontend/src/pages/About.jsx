@@ -58,17 +58,20 @@ const About = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1e] to-[#0a0a0f]">
       {/* About Me Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl font-bold text-white mb-8 leading-tight">
               About Me
             </h1>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                I am <span className="font-semibold text-gray-900">Deepak Sunil</span>, a passionate web designer and front-end developer 
+                I am <span className="font-semibold text-white">Deepak Sunil</span>, a passionate web designer and front-end developer 
                 focused on creating modern, user-friendly, responsive websites and landing pages. With a keen eye for 
                 design and a solid foundation in development, I bridge the gap between beautiful aesthetics and 
                 functional technology.
@@ -89,30 +92,30 @@ const About = () => {
       </section>
 
       {/* Why Choose Me */}
-      <section className="py-24 bg-white">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
               Why Choose Me
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Delivering excellence through expertise, dedication, and client-first approach
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {reasons.map((reason, index) => (
-              <Card key={index} className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <Card key={index} className="bg-white/5 border-l-4 border-l-blue-500 border-t border-r border-b border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/20">
                 <CardContent className="pt-8">
                   <div className="flex items-start space-x-4">
-                    <div className="text-gray-900 flex-shrink-0">
+                    <div className="text-blue-400 flex-shrink-0">
                       {reason.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      <h3 className="text-xl font-semibold text-white mb-3">
                         {reason.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-400 leading-relaxed">
                         {reason.description}
                       </p>
                     </div>
@@ -123,17 +126,17 @@ const About = () => {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="bg-white/5 border-l-4 border-l-purple-500 border-t border-r border-b border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/20">
               <CardContent className="pt-8">
                 <div className="flex items-start space-x-4">
-                  <div className="text-gray-900 flex-shrink-0">
+                  <div className="text-purple-400 flex-shrink-0">
                     <CheckCircle2 size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    <h3 className="text-xl font-semibold text-white mb-3">
                       Attention to Detail
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                       Every pixel matters - meticulous craftsmanship in every project
                     </p>
                   </div>
@@ -141,17 +144,17 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="bg-white/5 border-l-4 border-l-purple-500 border-t border-r border-b border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/20">
               <CardContent className="pt-8">
                 <div className="flex items-start space-x-4">
-                  <div className="text-gray-900 flex-shrink-0">
+                  <div className="text-purple-400 flex-shrink-0">
                     <Layout size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    <h3 className="text-xl font-semibold text-white mb-3">
                       Landing Page Expertise
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                       Specialized knowledge in creating pages that convert
                     </p>
                   </div>
@@ -163,28 +166,28 @@ const About = () => {
       </section>
 
       {/* Services Detail */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
               Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Comprehensive solutions for your digital presence
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-gray-200">
+              <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/20">
                 <CardHeader>
-                  <div className="text-gray-900 mb-6">
+                  <div className="text-blue-400 mb-6">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl text-white">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-base">
+                  <p className="text-gray-400 leading-relaxed text-base">
                     {service.description}
                   </p>
                 </CardContent>
@@ -195,20 +198,20 @@ const About = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
               Skills & Technologies
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Tools and technologies I work with to deliver exceptional results
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             {skills.map((skill, index) => (
-              <Badge key={index} variant="secondary" className="px-5 py-3 text-base font-medium hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+              <Badge key={index} variant="secondary" className="px-5 py-3 text-base font-medium bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
                 {skill}
               </Badge>
             ))}
