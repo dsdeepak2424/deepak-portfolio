@@ -39,6 +39,12 @@ const Projects = () => {
       description: 'A professional and elegant hotel website designed to present accommodation details, services, and guest experience in a clean and attractive way.',
       link: 'https://nirmala-grand.vercel.app',
       tags: ['Web Design', 'Hospitality', 'Professional']
+    },
+    {
+      title: 'Nik Cafe – E-Commerce Website',
+      description: 'A modern and responsive e-commerce website built for a cafe business, featuring product listings, clean UI design, mobile-friendly layout, and smooth user experience for browsing and ordering items.',
+      link: 'https://cafenik.vercel.app/',
+      tags: ['E-Commerce', 'Web Design', 'UI/UX']
     }
   ];
 

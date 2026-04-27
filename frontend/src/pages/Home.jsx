@@ -46,7 +46,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-6 font-medium">
-              Web Designer | Front-End Developer | Logo Designer
+              Web Designer | Front-End Developer | UI/UX Designer
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-8 leading-snug">
               Creating Modern, Responsive Websites That Attract Clients
